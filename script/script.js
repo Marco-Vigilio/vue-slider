@@ -64,9 +64,12 @@ createApp({
                 console.log(element.image);
                 //todo: cancellare in tutti i tag img la classe active
             });
-            console.log(indice.explicitOriginalTarget);
-            indice.explicitOriginalTarget.classList.add("active");
-            //todo: inserire la classe active solo a il tag img selezionato
+            this.images.forEach((element, index) => {
+                console.log(indice.explicitOriginalTarget);
+                indice.explicitOriginalTarget.classList.add("active");
+                //todo: inserire la classe active solo a il tag img selezionato
+                activeIndex = index;
+            })
             /*
             this.images.forEach((element, index) => {
                 indice.explicitOriginalTarget.classList.remove("active");
