@@ -59,9 +59,13 @@ createApp({
             }
         },
         clickImage(){
-            this.arrayImg.forEach((element, index) => {
-                console.log("hai cliccato: " + element);
-            });
+            if(this.images[this.activeIndex].image === 0){
+                console.log(this.activeIndex);
+            }
+            /*
+            this.images.forEach((element, index) => {
+                console.log(index);
+            );*/
             
         }
     }

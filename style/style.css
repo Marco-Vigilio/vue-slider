@@ -83,10 +83,11 @@ p{
     justify-content: center;
 }
 
-.thumbnail{
-    background-color: rgb(63, 57, 57);
-}
-
 .thumbnails img{
     width: 100px;
+    filter: brightness(40%);
+}
+
+.thumbnails img.active{
+    filter: brightness(100%);
 }

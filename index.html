@@ -22,8 +22,8 @@
                 <img v-bind:src="images[activeIndex].image"  alt="image Random">
             </div>
             <div class="thumbnails" >
-                <div v-for="element in images">
-                   <img v-bind:src="element.image" alt="image Random" @click="clickImage">
+                <div v-for="(element, index) in images">
+                   <img v-bind:src="element.image" alt="image Random" v-bind:class="index === activeIndex ? 'active' : '' " @click="clickImage">
                 </div>
             </div>
         </div>
