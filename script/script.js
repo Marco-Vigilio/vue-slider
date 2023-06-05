@@ -58,6 +58,8 @@ createApp({
             }
         },
         clickImage(indice){
+            //this.activeIndex = null;
+
             this.images.forEach((element, index) => {
                 console.log(element.image);
                 //todo: cancellare in tutti i tag img la classe active
