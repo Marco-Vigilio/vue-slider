@@ -57,6 +57,14 @@ createApp({
             else{
                 this.activeIndex++;
             }
+        },
+        clickImage(){
+            this.arrayImg.forEach((element, index) => {
+                console.log("hai cliccato: " + element);
+            });
+            
         }
     }
 }).mount("#app");
+
+

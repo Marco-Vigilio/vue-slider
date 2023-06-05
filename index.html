@@ -19,11 +19,11 @@
             <div class="carousel ">
                 <button class="preview-button" @click="previewImage"><i class="fa-solid fa-caret-left"></i></button>
                 <button class="afterview-button" @click="nextImage"><i class="fa-solid fa-caret-right"></i></button>
-                <img v-bind:src="'img/' + images[activeIndex].image"  alt="">
+                <img v-bind:src="images[activeIndex].image"  alt="image Random">
             </div>
             <div class="thumbnails" >
-                <div v-for="img in arrayImg">
-                    <img v-bind:src="'img/' + img" alt="image Random">
+                <div v-for="element in images">
+                   <img v-bind:src="element.image" alt="image Random" @click="clickImage">
                 </div>
             </div>
         </div>
