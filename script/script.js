@@ -43,29 +43,38 @@ createApp({
     methods:{
         previewImage(){
             if(this.activeIndex <= 0){
-                this.activeIndex = (this.arrayImg.length - 1);
+                this.activeIndex = (this.images.length - 1);
             }
             else{
                 this.activeIndex--;
             }
         },
         nextImage(){
-            if(this.activeIndex === (this.arrayImg.length - 1)){
+            if(this.activeIndex === (this.images.length - 1)){
                 this.activeIndex = 0;
             }
             else{
                 this.activeIndex++;
             }
         },
-        clickImage(){
-            if(this.images[this.activeIndex].image === 0){
-                console.log(this.activeIndex);
-            }
+        clickImage(indice){
+            this.images.forEach((element, index) => {
+                console.log(element.image);
+                //todo: cancellare in tutti i tag img la classe active
+            });
+            console.log(indice.explicitOriginalTarget);
+            indice.explicitOriginalTarget.classList.add("active");
+            //todo: inserire la classe active solo a il tag img selezionato
             /*
             this.images.forEach((element, index) => {
-                console.log(index);
-            );*/
-            
+                indice.explicitOriginalTarget.classList.remove("active");
+                if(this.activeIndex === indice){
+                    console.log();
+                    console.log(indice.explicitOriginalTarget);
+                    indice.explicitOriginalTarget.classList.add("active");
+                }
+            });
+            */
         }
     }
 }).mount("#app");
