@@ -40,9 +40,7 @@ p{
     max-width: 1000px;
     height: 500px;
     position: relative;
-    margin: 4rem auto;
-    border: 1.5rem solid blue;
-    border-radius: 3rem;
+    margin: 0 auto;
 }
 
 .carousel-item{
@@ -78,4 +76,17 @@ p{
 
 .afterview-button{
     right: 0;
+}
+
+.thumbnails{
+    display: flex;
+    justify-content: center;
+}
+
+.thumbnail{
+    background-color: rgb(63, 57, 57);
+}
+
+.thumbnails img{
+    width: 100px;
 }
