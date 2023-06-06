@@ -38,6 +38,7 @@ createApp({
                 }
             ],
             activeIndex: 0,
+            autoplay: false,
         }
     },
     methods:{
@@ -60,8 +61,30 @@ createApp({
         //GLI PASSO COME INDICE NEL HTML INDEX DELL'ARRAY
         clickImage(indice){
             this.activeIndex = indice;
+        },
+
+        startAutoplay(){
+            if (!this.autoplay){
+                this.autoplay = setInterval(this.nextSlide, 3000);
+                console.log('autoplay started');
+            } else {
+                console.warn('Autoplay is already active');
+            }
+        },
+
+        stopAutoplay(){
+            if (!this.autoplay ){
+                console.warn('There is no autoplay to stop');
+            } else {
+                console.log('autoplay cleared');
+                clearInterval(this.autoplay);
+                this.autoplay = false;
+            }
         }
-    }
+    },
+    mounted(){
+        this.startAutoplay();
+    },
 }).mount("#app");
 
 
