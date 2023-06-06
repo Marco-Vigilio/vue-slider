@@ -57,29 +57,9 @@ createApp({
                 this.activeIndex++;
             }
         },
+        //GLI PASSO COME INDICE NEL HTML INDEX DELL'ARRAY
         clickImage(indice){
-            //this.activeIndex = null;
-
-            this.images.forEach((element, index) => {
-                console.log(element.image);
-                //todo: cancellare in tutti i tag img la classe active
-            });
-            this.images.forEach((element, index) => {
-                console.log(indice.explicitOriginalTarget);
-                indice.explicitOriginalTarget.classList.add("active");
-                //todo: inserire la classe active solo a il tag img selezionato
-                activeIndex = index;
-            })
-            /*
-            this.images.forEach((element, index) => {
-                indice.explicitOriginalTarget.classList.remove("active");
-                if(this.activeIndex === indice){
-                    console.log();
-                    console.log(indice.explicitOriginalTarget);
-                    indice.explicitOriginalTarget.classList.add("active");
-                }
-            });
-            */
+            this.activeIndex = indice;
         }
     }
 }).mount("#app");
